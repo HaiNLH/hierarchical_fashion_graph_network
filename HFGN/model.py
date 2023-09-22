@@ -145,9 +145,9 @@ class HFGN(object):
         self.neg_i_g_embeddings = tf.nn.embedding_lookup(self.outfit_hier_embedding, self.no_input)
 
 
+
         # Inference for the testing phase.
         self.batch_ratings = tf.matmul(self.u_g_embeddings, self.pos_i_g_embeddings, transpose_a=False, transpose_b=True)
-
         """
         Generate Predictions & Optimize.
         """
